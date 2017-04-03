@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>KING</title>    
+        <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+
+  <body>
+
+    <div class="wrapper" style="top:0px; margin-top:0px; height:100%;  bottom:0px;">
+	<div class="container" style="     margin-top: 100px; ">
+		<h1>Welcome</h1>
+		
+		<form name="LoginForm" class="form" method="POST" style="padding-bottom: 10px;" action="/login">
+			<input name="username" id="username" type="text" placeholder="Username">
+			<input name="password" id="password" type="password" placeholder="Password">
+			<button type="submit" id="login-button">Login</button>
+		</form>
+		<form class="form" style="padding-top: 0px;" action="/createUser">
+			<button type="submit" id="global-button" >Register New User</button>
+		</form>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  <%--     <script src="${pageContext.request.contextPath}/resources/js/index.js"></script> --%>
+
+    
+    
+    
+  </body>
+</html>

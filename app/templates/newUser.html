@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>KING</title>    
+        <link rel="stylesheet" href="../static/css/style.css">
+        <script>
+			function formValidation()  
+			{  
+				var uName = document.newUser.userName;
+				var uEmail = document.newUser.emailId;   
+				var uZipCode = document.newUser.zipCode;  
+				var uPassword = document.newUser.password; 
+				var uConfPassword = document.newUser.password1;
+				if(uZipCode.value.length != 5){
+					alert("Please enter a valid Zip Code for length 5.");
+					return false;
+				} else 	if(uPassword.value.length < 6){
+					alert("Password should be atleast 6.");
+					return false;
+				} else if(uPassword.value != uConfPassword.value){
+					alert("Confirm Password did not match.");
+					return false;
+				}
+				return true;
+}
+</script>
+  </head>
+
+  <body>
+
+    <div class="wrapper" style="top:0px; margin-top:0px; height:100%;  bottom:0px;">
+	<div class="container" style="     margin-top: 100px; ">
+		<h1>Register User</h1>
+		
+		
+		<form name="newUser" class="form" method="POST" onSubmit="return formValidation()" style="padding-bottom: 10px;" action="/new-Profile">
+			<input name="userName" id="userName" type="text" placeholder="Username">
+			<input name="emailId" id="emailId" type="text" placeholder="Email Id">
+			<input name="zipCode" id="zipCode" type="number" placeholder="Zip Code">			
+			<input name="password" id="password" type="password" placeholder="Password">
+			<input name="password1" id="password1" type="password" placeholder="Confirm Password">
+			<button type="submit" id="submit-button1">Submit</button>
+		</form>
+	</div>
+	
+	<ul class="bg-bubbles">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  <%--     <script src="${pageContext.request.contextPath}/resources/js/index.js"></script> --%>
+  </body>
+</html>
