@@ -1,8 +1,10 @@
 import mysql.connector
 from user import User
 
+# This class connects our application to database
 
 class DatabaseQueries():
+	# This is used to query database and get list of all user's in the table.
 	def getUserData(self):
 		cnx = mysql.connector.connect(user='root', password='password', host='127.0.0.1', database='sys')
 		cur = cnx.cursor()
@@ -25,6 +27,7 @@ class DatabaseQueries():
 		except:
 			return None
 
+	# This will be used to enter details of new user into the database table
 	def setUserData(self,user):
 		cnx = mysql.connector.connect(user='root', password='password', host='127.0.0.1', database='sys')
 		cur = cnx.cursor()
@@ -37,6 +40,7 @@ class DatabaseQueries():
 		cur.close()
 		cnx.close()
 
+	# This method is used to enter the project for the particular user
 	def updateUserProject(self,userName,project):
 		cnx = mysql.connector.connect(user='root', password='password', host='127.0.0.1', database='sys')
 		cur = cnx.cursor()

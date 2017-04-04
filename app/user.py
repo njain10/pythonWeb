@@ -1,3 +1,8 @@
+
+
+# This is a class for User object with properties and all properties are private and they are accessed using setters and getters.
+
+
 class User:
     userCount = 0;
     def __init__(self):
